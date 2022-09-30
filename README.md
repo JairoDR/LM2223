@@ -4,3 +4,4 @@ Bienvenides al repositorio de **Jairo**. Aquí encontrarás todos los ejercicios
 - Ejercicios HTML
 - Ejercicios CSS
 - Ejercicios JS
+- Ejercicios de JQuery
