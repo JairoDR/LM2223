@@ -1,0 +1,26 @@
+/* Estilos del ejercicio 1 de CSS*/
+
+.encabezado {
+    font-size: 200%;
+    color: blue;
+    text-align: center;      
+}
+
+.parrafos {
+    margin-left: 20px;
+    color: yellow;
+    text-align: left;
+}
+
+.cuadrado {
+    width: 150px;
+    height: 150px;
+    background-color: grey;
+}
+
+body {
+    background: url(https://www.publicdomainpictures.net/pictures/130000/velka/green-gradient-background-2.jpg) no-repeat top fixed;
+}
+
+
+
