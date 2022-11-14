@@ -1,0 +1,51 @@
+div {
+    width: 100%;
+    text-align: center;
+    color: black;
+    display: none;
+}
+@media screen and (max-width:480px) {
+	body {
+		background-color: green;
+	} 
+    #movil {
+        display: block;
+    }
+}    
+
+@media screen and (min-width: 481px) and (max-width:768px){
+    body {
+        background-color: blue;
+    }
+    #tablet {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width:1279px){
+    body {
+        background-color: red;
+    }
+    #portatil {
+        display: block;
+    }
+}
+
+@media screen and (min-width:1280px){
+    body {
+        background-color: yellow;
+    }
+    #monitor {
+        display: block;
+    }
+}
+
+@media print and (min-width:1280px){
+    body {
+        background-color: white;
+    }
+    #imprimir {
+        font-family: 'Times New Roman', Times, serif;
+        display: block;
+    }
+}
