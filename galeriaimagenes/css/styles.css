@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+  
+  h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 2px;
+  }
+  
+  .fila {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5px;
+  }
+  
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 5px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    align-items: center;
+  }
+
+  @media (max-width: 720px) {
+    .column {
+      flex: 60%;
+      max-width: 60%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
