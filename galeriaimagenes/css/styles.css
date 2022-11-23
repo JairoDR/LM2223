@@ -19,27 +19,34 @@
     padding: 0 5px;
   }
   
-  .column {
+  .columna {
     flex: 25%;
     max-width: 25%;
     padding: 0 5px;
   }
   
-  .column img {
+  .columna img {
     margin-top: 8px;
     vertical-align: middle;
     align-items: center;
   }
 
   @media (max-width: 720px) {
-    .column {
-      flex: 60%;
-      max-width: 60%;
+    .columna {
+      flex: 33.3%;
+      max-width: 33.3%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .columna {
+      flex: 50%;
+      max-width: 50%;
     }
   }
   
   @media (max-width: 480px) {
-    .column {
+    .columna {
       flex: 100%;
       max-width: 100%;
     }
