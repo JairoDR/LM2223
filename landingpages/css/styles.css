@@ -10,7 +10,7 @@
   .cabecera {
     padding: 60px;
     text-align: center;
-    background: #1abc9c;
+    background: #72b4ff;
     color: white;
   }
   
@@ -27,8 +27,8 @@
   }
   
   .navegador a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: rgb(223, 213, 213);
+    color: rgb(37, 36, 36);
   }
 
   .fila {  
@@ -38,7 +38,7 @@
 
   .lateral {
     flex: 30%;
-    background-color: #f2f2f2;
+    background-color: #eb8f8f;
     padding: 20px;
   }
 
@@ -49,7 +49,7 @@
   }
   
   .fakeimg {
-    background-color: #aaa;
+    background-color: rgb(155, 155, 155);
     width: 100%;
     padding: 20px;
   }
@@ -57,7 +57,7 @@
   .piedefoto {
     padding: 20px;
     text-align: center;
-    background: #ddd;
+    background: rgb(231, 219, 219);
   }
   
   @media screen and (max-width: 700px) {
