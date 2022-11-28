@@ -1,0 +1,41 @@
+div{text-align: center;
+    color: white;
+    padding: 8px;}
+.padre{
+    border: 3px solid red;
+    width: 98%;
+    height: 100px;
+    display: flex;
+    align-items: center;}
+.padre > div{
+width: auto;
+height: auto;}
+#div1{
+    background-color: aquamarine;
+    font-size: small;}
+#div2{
+    background-color: lightcoral;
+    font-size: large;}
+#div3{
+    background-color: lightseagreen;
+    font-size: x-large;}
+#div4{
+    background-color: lightslategray;
+    font-size: xx-large;}
+#div5{
+    background-color: lightpink;
+    font-size: xx-small;}
+#div6{
+    background-color: brown;
+    font-size: small;}
+#div7{
+    background-color: lavender;
+    font-size: 50px;}
+#div8{
+    background-color: tomato;
+    font-size: large;}
+#div9{
+    background-color: black;
+    font-size: xx-small;}
+#div10{
+    background-color: olivedrab;}

@@ -1,0 +1,35 @@
+#container{
+    padding: 5px;
+    height: 50px;
+    width: 95%;
+    background-color: bisque;
+    border: 3px solid rgb(142, 98, 63);
+    border-radius: 10px;
+    display: flex;
+    vertical-align: middle;
+    line-height: 50px;}
+
+#container > div{
+    text-align: center;
+    height: auto;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;}
+
+#container div:nth-of-type(1) {
+    flex-grow: 1;
+    background-color: lightcyan;}
+#container div:nth-of-type(2) {
+    flex-grow: 4;
+    background-color: lightblue;}
+#container div:nth-of-type(3) {
+    flex-grow: 10;
+    background-color: lightcoral;}
+#container div:nth-of-type(4) {
+    flex-grow: 5;
+    background-color: lightgoldenrodyellow;}
+#container div:nth-of-type(5) {
+    flex-grow: 2;
+    background-color: lightgray;}
+#container div:nth-of-type(6) {
+    flex-grow: 3;
+    background-color: lightpink;}

@@ -1,0 +1,45 @@
+div{text-align: center;
+    color: white;
+    font-size: 30px;
+    padding: 8px;}
+.padre{
+    border: 3px solid red;
+    width: 90%;
+    height: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    }
+.padre > div{
+    height: auto;}
+#div1{
+    background-color: aquamarine;
+    flex: 1;}
+#div2{
+    background-color: lightcoral;
+    flex:1;}
+#div3{
+    background-color: lightseagreen;
+    flex: 1;}
+#div4{
+    background-color: lightslategray;
+    flex: 1;}
+#div5{
+    background-color: lightpink;
+    order: -5;
+    flex: 1;}
+#div6{
+    background-color: brown;
+    order: 4;
+    flex: 1;}
+#div7{
+    background-color: lavender;
+    flex: 1;}
+#div8{
+    background-color: tomato;
+    flex: 1;}
+#div9{
+    background-color: black;
+    flex:1}
+#div10{
+    background-color: olivedrab;
+    flex: 1;}

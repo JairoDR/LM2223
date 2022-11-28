@@ -1,0 +1,34 @@
+div{
+    text-align: center;
+    color: white;}
+.padre{
+    border: 1px solid red;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;}
+.padre > div{
+    font-size: xx-small;
+    width: auto;
+    height: auto;}
+#div1{
+    background-color: aquamarine;}
+#div2{
+    background-color: lightcoral;}
+#div3{
+    background-color: lightseagreen;}
+#div4{
+    background-color: lightslategray;}
+#div5{
+    background-color: lightpink;}
+#div6{
+    background-color: brown;}
+#div7{
+    background-color: lavender;}
+#div8{
+    background-color: tomato;}
+#div9{
+    background-color: black;}
+#div10{
+    background-color: olivedrab;}
