@@ -1,0 +1,50 @@
+body {
+    background-color: cadetblue;
+    text-align: center;
+}
+
+.caja {
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+    display: grid;
+    justify-content: stretch;
+    border:2px dashed red;
+    height: 84vh;
+    width: 80%;
+    margin: 0 auto;
+    grid-template-rows: 10% 20% auto 10%;
+    grid-template-areas: "cabecera cabecera"
+     "menu menu" 
+     "contenido banners" 
+     "footer footer"
+}
+
+.caja>div {
+    border: 4px solid black;
+}
+
+.cabecera {
+    background-color: lightblue;
+    grid-area: cabecera;
+}
+
+.menu {
+    background-color: lightgoldenrodyellow;
+    grid-area:menu ;
+}
+
+.contenido {
+    background-color: salmon;
+    grid-area: contenido;
+}
+
+.banners {
+    background-color: aquamarine;
+    grid-area: "banners";
+}
+
+.footer {
+    background-color: azure;
+    grid-area: footer;
+}
