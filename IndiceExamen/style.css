@@ -1,0 +1,122 @@
+/* FUENTE IMPORTADA */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
+.ejemplo {
+    /******************* TIPOS DE TEXTO ******************/
+    text-align: left;   /* DEFAULT */
+    text-align: center;
+    text-align: justify;
+    text-align: right;
+
+    /******************* TIPOS DE FUENTE ******************/
+    font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif; /* FUENTE IMPORTADA PRIMERO */
+    font-variant: small-caps;   /* TODO MAYUSCULAS */
+    font-weight: bold;  /* NEGRITA */
+    font-size: 24px;    /* TAMAÑO */
+    font-style: italic;     /* CURSIVA */
+
+    /******************* COLORES ******************/
+    /* TEXTO */
+    color: darkgray;
+
+    /* FONDO */
+    background: whitesmoke;
+    background-color: aliceblue;
+
+    /******************* IMAGENES EN FONDO ******************/
+    /* CON ENLACE */
+    background-image: url('http://www.solofondos.com/wp-content/uploads/2015/11/Imagen-de-fondo-html.jpg') no-repeat;
+    /* CON RUTA */
+    background-image: url(/images/imagen.jpg) no-repeat;
+    /* IMAGEN LLAMADA (imagen.jgp) DENTRO DE CARPETA LLAMADA (images) */
+
+    /******************* FORMAS DE CENTRAR ALGO ******************/
+    /* EN UN DIV */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* EN UNA TABLA */
+    text-align: center;
+
+    /* CON display: wrap */
+    display: wrap;
+    align-content: center;
+
+    /* OTRAS FORMAS */
+    vertical-align: middle;
+    line-height: 10px;
+
+    /******************* MARGEN, BORDE, PADDING, SITE ******************/                      /* ORDEN DE FUERA A DENTRO */
+    /* ORDEN DEL MARGEN: ARRIBA 1%, DERECHA 10%, ABAJO 1%, IZQUIERDA 10% */
+    margin: 1% 10% 1% 10%;
+    margin-top: 1%;
+    margin-right: 10%;
+    margin-bottom: 1%;
+    margin-left: 10%;
+
+    /* BORDE */
+    border: 1px solid black; /* GENERAL */
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+
+    border-radius: 20px;    /* BORDE REDONDEADO */
+    border-collapse: collapse; /* UNIR BORDES (SOBRE TODO EN TABLAS)*/
+
+    /* ORDEN DEL PADDING: ARRIBA 1%, DERECHA 10%, ABAJO 1%, IZQUIERDA 10% */
+    padding: 1% 10% 1% 10%;
+    padding-top: 1%;
+    padding-right: 10%;
+    padding-bottom: 1%;
+    padding-left: 10%;
+
+    /* ORDEN DENTRO DE LA PAGINA */
+    top: 100px;
+    right: 100px;
+    bottom: 100px;
+    left: 100px;
+
+    /* ALTURA */
+    height: 100px;
+
+    /******************* TIPOS DE DISPLAY ******************/
+    display: flex;  /* FLEXIBLE PARA MOVERLO A CUALQUIER SITIO Y CAMBIAR EL ORDEN*/
+    flex: 10%;              /* TAMAÑO */
+    flex-direction: column; /* COLUMNAS */
+    flex-direction: row;    /* FILAS */
+    flex-wrap: wrap;        /* SE BAJA AL COMPLETAR LA FILA */
+
+    display: grid;  /* CONTENEDORES */
+    grid-template-columns: auto auto auto auto; /* 4 COLUMNAS */
+    grid-template-rows: auto auto;  /* 2 COLUMNAS */
+
+    display: inline-block;  /* EN LINEA */
+
+    /******************* POSICIONES ******************/
+    position: relative;     /* SE COLOCA 20px A LA IZQUIERDA */
+    position: absolute;     /* SE COLOCA EN RELACION AL ANTECESOR */
+
+}
+
+img{
+    float: right;   /* FLOTA Y SE SUPERPONE A LA DERECHA */
+}
+
+
+/******************* TABLAS ******************/
+table,
+th,
+td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+
+@media screen and (min-width: 480px) {
+    /* SE PONE A DESDE 480px */
+}
+@media screen and (max-width: 480px) {
+    /* SE PONE A PARTIR DE 480px */
+}

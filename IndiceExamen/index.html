@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indice</title>
+
+  <!---------------------------------------------------- ESTILOS ---------------------------------------------------->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
+    body {
+      background-color: lightgrey;
+      margin: 1em 10vw;
+    }
+
+    body,
+    input,
+    select,
+    textarea {
+
+      font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    form {
+      background-color: white;
+      border: 1px solid black;
+      font-variant: small-caps;
+    }
+
+    fieldset {
+      border: 1px;
+    }
+
+    .formulario {
+      display: grid;
+      grid-template-columns: 20% 80%;
+      grid-row-gap: 1em;
+    }
+
+    .areatexto {
+      grid-column-end: span 2;
+    }
+
+    .contenedor {
+      grid-column: span 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contenedor .areasubmit {
+      width: 25%;
+    }
+
+    #tick,
+    #html,
+    #css,
+    #javascript {
+      width: 1em;
+      height: 1em;
+    }
+
+    label[for="name"]::after {
+      content: ':';
+    }
+
+    .texto {
+      margin-top: 2em;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-column-gap: 2em;
+    }
+  </style>
+</head>
+<!---------------------------------------------------- HTML ---------------------------------------------------->
+<body>
+  <!-- FORMULARIO -->
+  <form action="#" method="post" enctype='multipart/form-data'>
+    <fieldset>
+      <legend>FORMULARIO</legend>
+      <div class="formulario">
+        <!-- CUADRO PARA ESCRIBIR -->
+        <label for="name">Nombre</label>
+        <input id="name" type="text" name="class" placeholder="Escribe tu nombre...">
+
+        <!-- CUADRO PARA UN TICK -->
+        <label for="tick">Tick</label>
+        <input id="tick" type="checkbox" name="locks">
+
+        <!-- COLOR -->
+        <label for="colour">Color</label>
+        <input type="color" name="colour">
+
+        <!-- TELEFONO -->
+        <label for="phone">Telefono</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="000-000-000"
+          required>
+
+        <!-- EMAIL -->
+        <label for="date">Email</label>
+        <input type="email" name="email">
+
+        <!-- FECHA -->
+        <label for="date">Nacimiento</label>
+        <input type="date" name="date">
+
+        <!-- RADIO -->
+        <label for="html">HTML</label>
+        <input type="radio" id="html" name="lenguaje_fav" value="HTML">
+
+        <label for="css">CSS</label>
+        <input type="radio" id="css" name="lenguaje_fav" value="CSS">
+
+        <label for="javascript">JavaScript</label>
+        <input type="radio" id="javascript" name="lenguaje_fav" value="JavaScript">
+
+        <!-- VARIAS OPCIONES -->
+        <label for="alignment">Eleccion</label>
+        <select name="alignment" id="alignment">
+          <option value="eleccion1">Eleccion1</option>
+          <option value="eleccion2">Eleccion2</option>
+        </select>
+
+        <!-- AGREGAR ARCHIVOS -->
+        <label for="file">Archivos</label>
+        <input id="file" type="file" name="my-file" enctype='multipart/form-data'>
+
+        <!-- AGREGAR BOTON -->
+        <label for="button">button</label>
+        <input type="button" onclick="alert('Hello World!')" value="Click Me!">
+
+        <!-- AGREGAR FECHA CON HORA -->
+        <label for="datetime-local">datetime-local</label>
+        <input type="datetime-local">
+
+        <!-- AGREGAR IMAGENES -->
+        <label for="image">image</label>
+        <input type="image" src="rutaimagen" alt="ValorImagen" width="48" height="48">
+
+        <!-- AGREGAR MES -->
+        <label for="month">month</label>
+        <input type="month">
+
+        <!-- AGREGAR NUMERO -->
+        <label for="number">number</label>
+        <input type="number">
+
+        <!-- AGREGAR CONTRASEÑA -->
+        <label for="password">password</label>
+        <input type="password">
+
+        <!-- AGREGAR RANGO -->
+        <label for="range">range(1-50)</label>
+        <input type="range" id="range" name="range" min="0" max="50">
+
+        <!-- AGREGAR BOTON DE RESET -->
+        <label for="reset">reset</label>
+        <input type="reset">
+
+        <!-- AGREGAR BUSCADOR -->
+        <label for="gsearch">search</label>
+        <input type="search" id="gsearch" name="gsearch">
+
+        <!-- AGREGAR TIEMPO -->
+        <label for="appt">time</label>
+        <input type="time" id="appt" name="appt">
+
+        <!-- AGREGAR SEMANA -->
+        <label for="week">week</label>
+        <input type="week" id="week" name="week">
+
+        <!-- CUADRO DE TEXTO -->
+        <label class="areatexto" for="area">Area De Texto</label>
+        <textarea class="areatexto" name="area" id="story" cols="10" rows="5"
+          placeholder="Texto de ejemplo..."></textarea>
+
+
+        <!-- BOTON DE SUBIR VALORES -->
+        <div class="contenedor"><input class="areasubmit" type="submit" value="Subir"></div>
+      </div>
+    </fieldset>
+  </form>
+
+
+  <div class="texto">
+    <!-- TABLA -->
+    <table border="1px">    <!-- LE AÑADO BORDE PARA QUE SE VEAN LAS UNIONES CON rowspan Y colspan -->
+      <th style="background-color: rgb(216, 216, 216);">HEADER</th>
+      <tbody>
+        <tr>
+          <td>BODY</td>
+          <td>hola</td>
+          <td rowspan="2">ROWSPAN</td>
+        </tr>
+        <tr>
+          <td colspan="2">COLSPAN</td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <!--  ETIQUETAS SIMPLES -->
+      <p>Parrafo</p>
+      <img src="RutaDeImagen" alt="ValorDeLaImagen" target="_blank">
+      <p id="parrafo2">Parrafo con ID</p>
+      <p class="parrafo3">Parrafo con class</p>
+
+      <!--  CABECERA -->
+      <header>
+        <h1>Encabezado H1</h1>
+        <h2>Encabezado H2</h2>
+        <h3>Encabezado H3</h3>
+      </header>
+
+      <!-- BARRA DE NAVEGACIÓN -->
+      <nav>
+        <a href="#">Enlace1</a>
+        <a href="#">Enlace2</a>
+        <a href="#">Enlace3</a>
+        <a href="#">Enlace4</a>
+        <a href="#">Enlace5</a>
+      </nav>
+    </div>
+    <div>
+      <!-- ARTICULO -->
+      <article>
+        <p>TEXTO EN ARTICULO</p>
+      </article>
+
+      <!-- ARTICULO EN LATERAL -->
+      <aside>TEXTO ASIDE</aside>
+
+      <!-- ENLACE A MAIL -->
+      <a href="mailto:davidplaza03@iesamachado.org">Alumno David Plaza Diaz</a>
+    </div>
+    <!-- CARACTERES ESPECIALES -->
+    <div>
+      Carácteres especiales
+      <ul>
+        <li>&#8492&#8475&#8475&#8475
+        <li><del>tachado</del>
+        <li><bdo dir="rtl">al revés</bdo>
+        <li>Superindice<sup>1</sup> y Subindice<sub>2</sub>
+        <li><abbr title="abreviatura">ab.</abbr>
+        <li><span style="color:#ff0000;">rojo</span>
+        <li><span style="background-color:#22ffab;">fondo azul</span>
+        <li>
+          <pre>texto con formato</pre>
+        <li>
+          <h2 style="font-size: 200%"> Título con tamaño doble </h2>
+        <li>
+          <P>
+            <font size=4>Este texto es más grande</font>
+          </p>
+        <li>
+          <p style="font-size: 50%"> Párrafo con tamaño reducido a la mitad </p>
+      </ul>
+    </div>
+    <!-- PIE DE PAGINA -->
+    <footer>
+      <p>PIE DE PAGINA </p>
+    </footer>
+  </div>
+</body>
+
+</html>
