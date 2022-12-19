@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felicitación navideña</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        body {
+            background: url("https://i.imgur.com/tVx8g9B.jpg") no-repeat;
+            background-size: cover;
+        }
+
+        .encabezado {
+            text-align: center;
+            margin: 1em;
+        }
+
+        h1 {
+            background: rgb(255, 255, 255, 0.685);
+            border-radius: 10px;
+            padding: 20px 10px;
+            font-size: 70px;
+            color: rgb(187, 13, 48);
+        }
+
+        .imagenes {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .imagenes img {
+            display: flex;
+            margin: 1em;
+            width: 16rem;
+        }
+
+        .columna {
+            font-size: 20px;
+            text-align: center;
+            padding: 5px;
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                padding: 10px 0;
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="encabezado">
+        <h1>Feliz Navidad</h1>
+    </div>
+
+    <div class="imagenes">
+        <div class="columna">
+            <img src="https://i.imgur.com/8KLEdP3.jpg" alt="imagen1">
+            <p>Para comer en estas fechas.</p>
+        </div>
+        <div class="columna">
+            <img src="https://i.imgur.com/KF6GZVU.jpg" alt="imagen2">
+            <p>Un regalo para la familia.</p>
+        </div>
+    </div>
+</body>
+
+</html>
