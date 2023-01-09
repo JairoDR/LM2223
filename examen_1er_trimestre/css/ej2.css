@@ -1,0 +1,48 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(52, 49, 49);
+    padding: 1rem;
+}
+
+.recuadro {
+    background-color: rgb(11,76,26);
+    color: white;
+}
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr, 2fr;
+    grid-column: 1;
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px;
+    color: black;
+    max-width: 1178px;
+}
+
+
+.formulario form input, form textarea {
+    display: block; 
+}
+
+form textarea {
+    size: 200%;
+}
+
+form button {
+    size: 200%;
+    background-color: rgb(11,76,26);
+}
+
+form button:hover {
+    box-shadow: inset;
+}
+
+@media screen (max-width: 700px;) {
+    .contenedor {
+        flex: 100%;
+        max-width: 100%;
+        padding: 2em;
+    }
+}
+

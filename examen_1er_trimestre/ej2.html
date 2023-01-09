@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ej2.css">
+    <title>Formulario contacto con Grid</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="recuadro">
+            <p>IES Antonio Machado</p>
+            <p>Calle Arroyo 80</p>
+            <p>41008 Sevilla</p>
+            <p>41009071@juntadeandalucia.es</p>
+        </div>
+        <div class="formulario">
+        <form action="#" method="post" enctype='multipart/form-data'>
+            <fieldset>
+            <legend>Contacta con nosotros</legend>
+            <div class="formulario">
+                <label for="name">Nombre</label>
+                <input id="name" type="text" name="class" placeholder="Escribe tu nombre...">
+                <br>
+                <label for="sname">Apellido</label>
+                <input id="sname" type="text" name="class" placeholder="Escribe tus apellidos...">
+                <br>
+                <label for="email">Correo electrónico</label>
+                <input id="email" type="email" name="class" placeholder="Correo electrónico...">
+                <br>
+                <label class="areatexto" for="area" cols="30" rows="5">Area De Texto</label>
+                        <textarea class="areatexto" name="area" id="story" cols="10" rows="5" placeholder="Texto de ejemplo..."></textarea>
+                <br>
+                <input class="areasubmit" type="submit" value="Enviar">
+        </div>
+    </div>
+</body>
+</html>
