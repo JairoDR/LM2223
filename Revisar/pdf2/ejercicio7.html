@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7 PDF2</title>
+</head>
+<body>
+    <h2>Cálculo de habitaciones necesarias</h2>
+    <p>Disponemos de las habitaciones siguientes:</p>
+    <ul>
+        <li>Dobles: un adulto o dos.</li>
+        <li>Dobles con supletoria: Dos adultos y un niño.</li>
+        <li>Triples: Tres adultos.</li>
+        <li>Familiares: Dos adultos y dos niños.</li>
+    </ul>
+    <p>Por favor, introduzca el número de personas adultas y niños.</p>
+    <p>Adultos (máx 5)</p>
+    <input id="adultos" type="textbox">
+    <p>Niños (máx 2)</p>
+    <input id="niños" type="textbox"><br><br>
+    <button onclick="calcular()">Calcular</button>
+    <p id="habitaciones"></p>
+    <script>
+        function calcular(){
+            var adultos, niños;
+            adultos=document.getElementById('adultos').value;
+            niños=document.getElementById('niños').value;
+            if(niños==0){
+                switch (adultos){
+                    case "0":
+                        document.getElementById('habitaciones').innerHTML="Por favor introduzca un valor válido";
+                        break;
+                    case "1":
+                        document.getElementById('habitaciones').innerHTML="Habitaciones: 1 Doble";
+                        break;
+                    case "2":
+                        document.getElementById('habitaciones').innerHTML="Habitaciones: 1 Doble";
+                        break;
+                    case "3":
+                        document.getElementById('habitaciones').innerHTML="Habitaciones: 1 Triple";
+                        break;
+                    case "4":
+                        document.getElementById('habitaciones').innerHTML="Habitaciones: 2 Dobles o 1 Triple y 1 Doble";
+                        break;
+                    case "5":
+                        document.getElementById('habitaciones').innerHTML="Habitaciones: 1 Triple y 1 Doble";
+                        break;
+                    default:
+                        document.getElementById('habitaciones').innerHTML="Máximo 5 adultos por reserva";  
+                }
+            }
+            else{
+                if(niños==1){
+                    switch (adultos){
+                    case "0":
+                        document.getElementById('habitaciones').innerHTML="Los niños tienen que ir acompañados mínimo por 2 adultos";
+                        break;
+                    case "1":
+                        document.getElementById('habitaciones').innerHTML="Los niños tienen que ir acompañados mínimo por 2 adultos";
+                        break;
+                    case "2":
+                        document.getElementById('habitaciones').innerHTML="Habitaciones: 1 Doble con supletoria";
+                        break;
+                    case "3":
+                        document.getElementById('habitaciones').innerHTML="Habitaciones: 1 Doble con supletoria y 1 Doble";
+                        break;
+                    case "4":
+                        document.getElementById('habitaciones').innerHTML="Habitaciones: 1 Doble con supletoria y 1 Doble";
+                        break;
+                    case "5":
+                        document.getElementById('habitaciones').innerHTML="Habitaciones: 1 Triple y 1 Doble con supletoria";
+                        break;
+                    default:
+                        document.getElementById('habitaciones').innerHTML="Máximo 5 adultos por reserva";        
+                }
+                }
+                else{
+                    if(niños==2){
+                        switch(adultos){
+                            case "0":
+                        document.getElementById('habitaciones').innerHTML="Los niños tienen que ir acompañados mínimo por 2 adultos";
+                        break;
+                    case "1":
+                        document.getElementById('habitaciones').innerHTML="Los niños tienen que ir acompañados mínimo por 2 adultos";
+                        break;
+                    case "2":
+                        document.getElementById('habitaciones').innerHTML="Habitaciones: 1 Familiar";
+                        break;
+                    case "3":
+                        document.getElementById('habitaciones').innerHTML="Habitaciones: 1 Familiar y 1 Doble";
+                        break;
+                    case "4":
+                        document.getElementById('habitaciones').innerHTML="Habitaciones: 1 Familiar y 1 Doble o 2 Dobles con supletoria";
+                        break;
+                    case "5":
+                        document.getElementById('habitaciones').innerHTML="Habitaciones: 1 Familiar y 1 Triple";
+                        break;
+                    default:
+                        document.getElementById('habitaciones').innerHTML="Máximo 5 adultos por reserva";
+                        }
+                    }
+                    else{
+                        document.getElementById('habitaciones').innerHTML="Máximo 2 niños por reserva";
+                    }
+                }
+            }
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+img{
+    height: 400px;
+    width: auto;
+    display: none;
+}
+
+#primero{
+    display: block !important ;
+}
+
+#fotos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

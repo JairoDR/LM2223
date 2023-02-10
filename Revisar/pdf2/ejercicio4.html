@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 PDF2</title>
+</head>
+<body>
+    <h1>Ejercicio 4</h1>
+    <p style="width:600px ;">Realice un script que, mediante botones y cajas de texto, permita añadir/eliminar
+    elementos a un array, ordenarlo de manera creciente y decreciente así como la
+    posibilidad de buscar un elemento en la estructura de datos indicando en pantalla su
+    posición.</p>
+
+    <p>Escribeme una palabra para añadirla al array</p>
+    <input id="entrada" type="textbox">
+    <button onclick="añadir_final()">Añadir al final</button>
+    <button onclick="añadir_principio()">Añadir al principio</button>
+    <button onclick="eliminar_final()">Eliminar el último</button>
+    <button onclick="eliminar_principio()">Eliminar el primero</button>
+    <p style="font-weight: bold;">Array</p>
+    <p id="palabras"></p>
+    <button onclick="orden()">Cambiar orden</button>
+    <p>Puedes buscar una palabra en el array escribiendo su posición</p>
+    <input style="width: 250px;" id="busqueda" type="textbox" placeholder="Escribe aquí la posición de la palabra">
+    <button onclick="buscar()">Buscar</button>
+    <p id="google"></p>
+
+    <script>
+        var total=[];
+        document.getElementById('palabras').innerHTML = total;
+        function añadir_final(){
+            var a;
+            a= document.getElementById('entrada').value;
+            total.push(a);
+            document.getElementById('palabras').innerHTML = total;
+        }
+
+        function añadir_principio(){
+            var a;
+            a= document.getElementById('entrada').value;
+            total.unshift(a);
+            document.getElementById('palabras').innerHTML = total;
+        }
+
+        function eliminar_final(){
+            total.pop();
+            document.getElementById('palabras').innerHTML=total;
+        }
+        function eliminar_principio(){
+            total.shift();
+            document.getElementById('palabras').innerHTML=total;
+        }
+        function orden(){
+            total.reverse();
+            document.getElementById('palabras').innerHTML=total;
+        }
+        function buscar(){
+            var a;
+            a=document.getElementById('busqueda').value -1;
+            document.getElementById('google').innerHTML=total[a];
+        }
+    </script>
+</body>
+</html>

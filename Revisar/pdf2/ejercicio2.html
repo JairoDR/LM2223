@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 PDF 2</title>
+</head>
+<body>
+    <h1>Conversor de Euros y Dolares 1$ = 0,94€</h1>
+    <h2>De Euros a Dolares</h2>
+    <input id="euros" type="textbox">
+    <br><button onclick="eu()">Convertir a Dolares</button>
+    <p id="resultado1"></p>
+    <h2>De Dolares a Euros</h2>
+    <input id="dolares" type="textbox">
+    <br><button onclick="dol()">Convertir a Euros</button>
+    <p id="resultado2"></p>
+
+    <script>
+        function eu(){
+            var a;
+            a=document.getElementById('euros').value;
+            var b;
+            b=a/0.94;
+            document.getElementById('resultado1').innerHTML='El resultado es ' +b;
+        }
+        function dol(){
+            var c;
+            c=document.getElementById('dolares').value;
+            var d;
+            d=c*0.94;
+            document.getElementById('resultado2').innerHTML='El resultado es ' +d;
+        }
+    </script>
+</body>
+</html>

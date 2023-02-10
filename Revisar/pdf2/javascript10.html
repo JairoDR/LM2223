@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript10</title>
+
+</head>
+<body>
+    <p>Prueba de variables global</p>
+    <button onclick="suma()">Incrementar 2</button>
+    <button onclick="resta()">Decrementar 2</button>
+    <p id="demo"></p>
+    <script>
+            var numero=0;
+            document.getElementById("demo").innerHTML = numero;
+        function resta() {
+            numero -=2;
+            document.getElementById("demo").innerHTML = numero;
+        }
+        function suma() {
+            numero +=2;
+            document.getElementById("demo").innerHTML = numero;
+        }
+</script>
+
+</body>
+</html>

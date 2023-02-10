@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <h1>Letra automática de DNI</h1>
+    <p>Por favor, introduce tu DNI aquí:</p>
+    <input id="dni" type="textbox" placeholder="Ejemplo:89765926">
+    <button onclick="generar()">Generar letra</button>
+    <p id="resultado"></p>
+    <script>
+        var letras=["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"];
+        function generar(){
+            var a;
+            var longitud;
+            a=document.getElementById('dni').value;
+            longitud=a.length;
+            if(longitud!=8){
+            document.getElementById('resultado').innerHTML="Lo siento, ha introducido un número incorrecto de dígitos. Vuelva a intentarlo.";
+            }
+            else{
+            a=a%23;
+            document.getElementById('resultado').innerHTML="Tu letra es: " +letras[a];
+            document.getElementById('dni').innerHTML="-"+letras[a];
+        }
+        }
+    </script>
+</body>
+</html>

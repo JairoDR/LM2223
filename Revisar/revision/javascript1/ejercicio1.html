@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="circulos.css">
+</head>
+<body>
+    <div id="caja">
+        <div class="fila">
+            <div id="rojo"></div>
+            <div id="verde"></div>
+            <div id="azul"></div>
+        </div>
+        <div class="fila">
+            <button class="boton" onclick="ocultar('rojo','red')">Ocultar</button>
+            <button class="boton" onclick="ocultar('verde','green')">Ocultar</button>
+            <button class="boton" onclick="ocultar('azul','blue')">Ocultar</button>
+        </div>
+    </div>
+    <script>
+        function ocultar(a,color){
+            if(document.getElementById(a).style.backgroundColor=='transparent')
+            {document.getElementById(a).style.backgroundColor=color;}
+            else{
+                document.getElementById(a).style.backgroundColor='transparent';
+            }
+    }
+    </script>
+</body>
+</html>

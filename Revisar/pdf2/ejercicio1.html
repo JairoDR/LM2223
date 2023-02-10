@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 PDF 2</title>
+</head>
+<body>
+    <h1>Crea un usuario</h1>
+    <h4>Introduce el nombre de usuario</h4>
+    <input id="usuario" type="textbox">
+    <h4>Introduce la contraseña</h4>
+    <input id="contra" type="textbox">
+    <button onclick="bienvenido()">Login</button>
+    <script>
+        function bienvenido(){
+            var a;
+            var b;
+            a=document.getElementById('usuario').value;
+            b=document.getElementById('contra').value;
+            alert('Bienvenido usuario ' +a+ ' con la contraseña ' +b);
+        }
+    </script>
+</body>
+</html>
