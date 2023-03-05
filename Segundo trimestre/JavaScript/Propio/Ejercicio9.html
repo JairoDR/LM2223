@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muchas cosas</title>
+</head>
+<body>
+    <h1>Inicia sesión</h1>
+        <input id="usuario" type="text" placeholder="Usuario">
+        <input id="pass" type="password" placeholder="Contraseña">
+        <button onclick="saludo()">Login</button>
+
+    <h1>Convierta su saldo</h1>
+    <input type="number" id="valor">
+        <select id="moneda">
+            <option value="dolar">Dólar</option>
+            <option value="euro">Euro</option>
+        </select>
+        <button onclick="cambio()">Convertir</button>
+
+        <p id="resultado"></p>
+
+        <h1>Convierta su temperatura</h1>
+    <input type="number" id="valor2">
+        <select id="grados">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+        </select>
+        <button onclick="cambio2()">Convertir</button>
+
+        <p id="resultado2"></p>
+
+
+<script>
+    function saludo() {
+        var usuario;
+        usuario = document.getElementById("usuario").value;
+        var pass;
+        pass = document.getElementById("pass").value;
+        alert('Bienvenido '+usuario+' con la contraseña '+pass);
+    }
+
+    function cambio() {
+        var moneda = document.getElementById('moneda').value;
+        var valor = document.getElementById('valor').value;
+        var resultado;
+        if(moneda == 'euro') {
+            resultado = valor * 1.0661;
+            resultado +="$"
+        }
+        else {
+            resultado = valor * 0.94;
+            resultado +="€"
+        }
+        document.getElementById('resultado').innerHTML = resultado;
+
+    }   
+    function cambio2() {
+        var grados = document.getElementById('grados').value;
+        var valor2 = document.getElementById('valor2').value;
+        var resultado;
+        if(grados == 'fahrenheit') {
+            resultado = valor2 * 9/5 + 32;
+            resultado +="ºC"
+        }
+        else {
+            resultado = (valor2 - 32) * 5/9;
+            resultado +="ºF"
+        }
+        document.getElementById('resultado2').innerHTML = resultado;
+    }    
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/login.jpg);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contenedor {
+    margin-top: 22vh;
+    width: 400px;
+    height: 400px;
+    border: solid black 1px;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+#usuario, #pass {
+    width: 250px;
+    background: transparent;
+    border-radius: 5px;
+}
+
+#check, #usuario, #pass{
+    margin-bottom: 10px;
+}
+
+#login {
+    width: 100px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+    background: transparent;
+}
+

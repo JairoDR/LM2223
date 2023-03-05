@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Círculos</title>
+    <style>
+        #contenedor {
+	        display: flex;
+	        align-items: center;
+            justify-content: space-between;
+            width: 20%;
+        }
+        #contenedor2 {
+            width: 20%;
+	        display: flex;
+	        align-items: center;
+            justify-content: space-between;
+        }
+       #c1 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: red;
+            margin-bottom: 20px;
+        }
+        #c2 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: blue;
+            margin-bottom: 20px;
+        }
+        #c3 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: yellow;
+            margin-bottom: 20px;
+        }
+        </style>
+</head>
+<body>
+    <h1>Círculos de la ctm</h1>
+    <div id="contenedor">
+        <div id="c1"></div>
+        <div id="c2"></div>
+        <div id="c3"></div> 
+    </div>
+    <div id="contenedor2">
+        <button type="button" onclick="ocultar('c1', 'red')">Cambiar</button>
+        <button type="button" onclick="ocultar('c2', 'blue')">Cambiar</button>
+        <button type="button" onclick="ocultar('c3', 'yellow')">Cambiar</button>
+    </div>    
+    <script src="Ejercicio6.js"></script>
+</body>
+</html>
