@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Es primo?</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            background-color: beige;}
+    </style>
+</head>
+<body>
+    <h1>¿Es primo?</h1>
+    <p>Introduce un número para saber si es primo</p>
+    <input id="valor" type="text">
+    <br><br>
+    <button onclick="primo()">Probar</button>
+    <p id="resultado"></p>
+
+    <script>
+
+        function primo(){
+            var i=2,resultado;
+            var numero = document.getElementById('valor').value;
+            while (i<numero && resultado!=0)
+            {
+                resultado=numero%i;
+                i++;
+                if(resultado!=0)
+                document.getElementById('resultado').innerHTML="El "+numero+" es primo";
+                else
+                document.getElementById('resultado').innerHTML="El "+numero+" no es primo"
+            }
+        }
+
+    </script>
+</body>
+</html>

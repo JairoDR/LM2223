@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisores</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            background-color: beige;}
+    </style>
+</head>
+<body>
+    <h1>Divisores</h1>
+    <p>Introduce un número para saber sus divisores</p>
+    <input id="valor" type="text">
+    <br><br>
+    <button onclick="divisor()">Probar</button>
+    <p>Los divisores son:</p>
+    <p id="divisores"></p>
+
+    <script>
+
+        function divisor(){
+            document.getElementById('divisores').innerHTML="";
+            var divisores="";
+            var numero=parseFloat(document.getElementById('valor').value);
+            for(var i=1;i<=numero;i++){
+                if(numero%i==0)
+                {
+                    document.getElementById('divisores').innerHTML=document.getElementById('divisores').innerHTML+ numero/i + " ";
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

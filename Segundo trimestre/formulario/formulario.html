@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación formulario</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <div id="caja">
+        <div>
+        <h1>Validación de formulario</h1>
+        <p style="font-size: small;">Los campos con (*) son obligatorios</p>
+        </div>
+
+<div id="preguntas">
+        <div>
+        <!--NOMBRE-->    
+        <p>Nombre (*)</p>
+        <input id="Nombre" type="text">
+        <p id="valNombre"></p>
+
+        <!--APELLIDO-->
+        <p>Apellido (*)</p>
+        <input id="Apellido" type="text">
+        <p id="valApellido"></p>    
+        
+        <!--CORREO-->
+        <p>Correo Electrónico (*)</p>
+        <input id="Correo" type="text">
+        <p id="valCorreo"></p>
+
+        <!--DIRECCION-->
+        <p>Dirección</p>
+        <input type="text">
+
+        <!--CIUDAD-->
+        <p>Ciudad</p>
+        <input type="text">
+
+        </div>
+
+        <div>
+        <!--TELEFONO-->
+        <p>Teléfono</p>
+        <input id="Telefono" type="text">
+        <p id="valTel"></p>
+
+        <!--DNI-->
+        <p>DNI (*)</p>
+        <input id="DNI" type="text" placeholder="11111111A">
+        <p id="valDNI"></p>
+        
+        <!--PIN-->
+        <p>PIN (*)</p>
+        <input id="PIN" type="password">
+        <p id="valPIN"></p>
+                
+        <!--CONFIRMAR PIN-->
+        <p>Confirmar PIN (*)</p>
+        <input id="PINconf" type="password">
+        <p id="valPINconf"></p>
+
+        </div>
+    </div>
+    
+        <!--BOTÓN REGISTRAR-->
+        <p><button onclick="verificar()">Registrar</button></p>
+</div>
+<script src="formulario.js"></script>
+</body>
+</html>
