@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+
+        <ul>
+            <li>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre"/>
+                <div style="display: none; color: red;" class='obligatorio' id="ObligaNombre"> Este campo es obligatorio</div>
+            </li><li>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido"/>
+                <div style="display: none; color: red;" class='obligatorio' id="ObligaApellido"> Este campo es obligatorio</div>
+            </li><li>
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo"/>
+                <div style="display: none; color: red;" class='obligatorio' id="ObligaCorreo"> Este campo es obligatorio</div>
+            </li><li>
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion"/>
+            </li><li>
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad"/>
+            </li><li>
+                <label for="telefono">Telefono:</label>
+                <input type="text" id="telefono" name="telefono"/>
+            </li><li>
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni" placeholder="11111111A"/>
+                <div style="display: none; color: red;" class='obligatorio' id="ObligaDNI"> Este campo es obligatorio</div>
+            </li><li>
+                <label for="pin">PIN:</label>
+                <input type="password" id="pin1" name="pin"/>
+                <div style="display: none; color: red;" class='obligatorio' id="ObligaPin1"> Este campo es obligatorio</div>
+            </li><li>
+                <label for="pin">PIN:</label>
+                <input type="password" id="pin2" name="pin"/>
+                <div style="display: none; color: red;" class='obligatorio' id="ObligaPin2"> Este campo es obligatorio</div>
+            </li><li>
+                <button type="reset">Resetear</button>
+                <button onclick="validar()">Enviar</button>
+               <!--  <button type="submit" onclick="validar()">Enviar</button> -->
+            </li>
+        </ul>
+    <script src="formulario.js"></script>
+</body>
+</html>

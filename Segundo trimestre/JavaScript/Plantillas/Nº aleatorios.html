@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego</title>
+</head>
+<body>
+    <h1>Escribe un numero entre el 0 y el 5</h1>
+    <input type="number" id="numero" required>
+    <button onclick="juegoNumero()">Probar</button>
+
+    <p id="respuesta"></p>
+<script>
+
+function juegoNumero(){
+    let numero = document.getElementById("numero").value;
+    let text;
+    let numeroRandom = Math.floor(Math.random() * 6);
+    if(numero > 5 || numero < 0 || numero == "" || isNaN(numero)){
+        alert('Introduce un numero vÃ¡lido');
+        return;
+    }
+
+    if(numero == numeroRandom){
+        text = 'Has acertado, numero correcto: '+numero;
+    }else{
+        text = 'Has fallado, numero introducido: '+numero+'<br>Numero correcto: '+numeroRandom;
+    }
+    document.getElementById("respuesta").innerHTML = text;
+}
+</script>
+</body>
+</html>
