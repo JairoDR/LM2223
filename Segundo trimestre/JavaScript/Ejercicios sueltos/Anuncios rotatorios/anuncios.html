@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuncios rotatorios</title>
+</head>
+<body>
+    <a id="enlace" href="" target="_blank">
+        <img src="" alt="No funciona" id="banner">
+    </a>
+
+    <script>
+        var imagenes=["images/banner0.png","images/banner1.png","images/banner2.png","images/banner3.png","images/banner4.png","images/banner5.png"];
+        var enlaces=["https://store.dsautomobiles.es/configurable","https://www.elcorteingles.es/supermercado/","https://www.elcorteingles.es/daitsu/electrodomesticos/aire-acondicionado/","https://www.madridhifi.com","https://launidad.movistarplus.es/?dis_c=331187589&dclid=CL-Lt9zx4_YCFdZEHQkdLpkExQ","https://www.tikamoon.es"];        
+        var i=Math.floor(Math.random() * imagenes.length);
+
+        function primero(){
+            document.getElementById('enlace').href=enlaces[i];
+            document.getElementById('banner').src=imagenes[i];
+        }
+        function rotacion(){
+            if(i==imagenes.length-1)
+            {i=0}
+            else i++;
+            
+            document.getElementById('enlace').href=enlaces[i];
+            document.getElementById('banner').src=imagenes[i];
+            setTimeout(rotation,3000);
+        }
+        primero();
+        rotacion();
+    </script>
+</body>
+</html>

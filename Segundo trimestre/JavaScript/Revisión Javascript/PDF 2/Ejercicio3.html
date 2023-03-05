@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulario de alta de usuario</title>
+  </head>
+  <body>
+    <h1>Formulario de alta de usuario</h1>
+    <form onsubmit="return validarFormulario()">
+      <label for="nombre">Nombre *</label>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+      <label for="apellido">Apellido *</label>
+      <input type="text" id="apellido" name="apellido" required><br><br>
+      <label for="correo">Correo electrónico *</label>
+      <input type="email" id="correo" name="correo" required><br><br>
+      <label for="direccion">Dirección</label>
+      <input type="text" id="direccion" name="direccion"><br><br>
+      <label for="ciudad">Ciudad</label>
+      <input type="text" id="ciudad" name="ciudad"><br><br>
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="telefono"><br><br>
+      <label for="dni">DNI *</label>
+      <input type="text" id="dni" name="dni" required><br><br>
+      <label for="pin">PIN *</label>
+      <input type="password" id="pin" name="pin" required minlength="8" maxlength="8"><br><br>
+      <label for="pin2">PIN repetido *</label>
+      <input type="password" id="pin2" name="pin2" required minlength="8" maxlength="8"><br><br>
+      <button type="submit">Enviar</button>
+    </form>
+    <div id="mensaje"></div>
+    <script>
+      function validarFormulario() {
+        var nombre = document.getElementById("nombre").value;
+        var apellido = document.getElementById("apellido").value;
+        var correo = document.getElementById("correo").value;
+        var dni = document.getElementById("dni").value;
+        var pin = document.getElementById("pin").value;
+        var pin2 = document.getElementById("pin2").value;
+        var telefono = document.getElementById("telefono").value;
+        var error = false;
+        var mensaje = "";
+        if (nombre == "") {
+          mensaje += "El campo nombre es requerido.<br>";
+          error = true;
+        }
+        if (apellido == "") {
+          mensaje += "El campo apellido es requerido.<br>";
+          error = true;
+        }
+        if (correo == "") {
+          mensaje += "El campo correo electrónico es requerido.<br>";
+          error = true;
+        }
+        if (dni == "") {
+          mensaje += "El campo DNI es requerido.<br>";
+          error = true;
+        } else if (!/^\d{8}[A-Z]$/.test(dni)) {
+          mensaje += "El formato del DNI no es válido (debe ser 8 dígitos y una letra mayúscula).<br>";
+          error = true;
+        }
+        if (pin == "") {
+          mensaje += "El campo PIN es requerido.<br>";
+          error = true;
+        } else if (pin.length != 8) {
+          mensaje += "El PIN debe tener exactamente 8 dígitos.<br>";
+          error = true;
+        }
+        if (pin2 == "") {
+          mensaje += "Debe repetir el PIN.zbr>";
+          error = true;
+        }
+      }
+    </script>
+  </body>
+</html>  

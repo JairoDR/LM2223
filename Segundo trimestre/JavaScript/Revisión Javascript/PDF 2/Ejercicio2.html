@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter para insultos</title>
+</head>
+<body>
+    <h1>Twitter</h1>
+    <input type="text" id="add">
+    <button onclick="add()">Escribe</button>
+    <button onclick="order()">Ordena</button>
+
+    <div id="demo"></div>
+
+<script>
+const post = ['Hola', 'Adios'];
+var text ='';
+imprime();
+
+function add(){
+    post.push(document.getElementById("add").value);
+
+    imprime();
+}
+
+function remove(value){
+    for (var i=0;i<=post.length;i++) {
+        if (post[i] === value) {
+            post.splice(i, 1);
+            break;
+        }
+    }
+    imprime();
+}
+
+function order(){
+    post.sort();
+
+    imprime();
+}
+
+function imprime(){
+    text = '';
+    post.forEach(myFunction);
+
+    document.getElementById("demo").innerHTML = text;
+}
+
+function myFunction(value) {
+    text += "<div id='"+value+"'><img src='images/bird.png' width='50px' alt='twitter'>"+value+"<img src='images/trash.png' width='50px' onclick='remove(`"+value+"`)' alt='trash'></div>";
+} 
+
+</script>
+</body>
+</html>
