@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de habitaciones</title>
+</head>
+<body>
+    <label for="adultos">Adultos:</label>
+    <input type="text" name="adultos" id="adultos">
+    <label for="adultos">Niños:</label>
+    <input type="text" name="ninos" id="ninos">
+    <button onclick="calcular()">Calcular</button>
+    <p id="reserva"></p>
+    <script>
+        /*  
+            • Dobles: un adulto o dos(habitaciones dobles).
+            • Dobles con supletoria: Dos adultos y un niño.
+            • Triples: Tres adultos.
+            • Familiares: Dos adultos y dos niños.
+        */
+       function calcular(){
+            let adultos = parseInt(document.getElementById("adultos").value);
+            let ninos = parseInt(document.getElementById("ninos").value);
+            let familiares=0, triples=0, dobles_supletoria=0, dobles=0;
+            let total = ninos+adultos;
+            if (ninos>2*adultos)
+            {
+                document.getElementById("reserva").innerHTML = "Imposible realizar reserva. Todos los menores deben estar acompañados en las habitaciones.";
+            }
+            else
+            {
+                // ninos <= 2*adultos
+                // Opción 1: Minimizar el número de habitaciones
+                if (ninos == adultos) {
+                    // Es un número par
+                    total = ninos+adultos;
+                    if (total>=4)
+                        familiares = Math.ceil(total/4);
+                    resto = total%4; 
+                    if (resto != 0){
+                        /* Si dividimos un número entre 4 y el resto no es cero puede ser 1,2 o 3
+                        pero es imposible que sea 1 o 3 ya que el número inicial es par, luego forzosamente tiene que ser dos */
+                        dobles = 1;
+                    }
+                }
+                else {
+                    while (ninos>=1 && adultos>=1)
+                    { 
+                        /* Primero colocamos los menores */
+                        dobles_supletoria+=1;
+                        adultos-=2;
+                        ninos-=1;
+                    }
+                    while (adultos>=1)
+                    {
+                        if (adultos%3==0)
+                        {
+                            triples+=1;
+                            adultos-=3;
+                        }
+                        else{
+                            dobles+=1;
+                            adultos-=2;
+                        }
+                    }
+                    total = adultos+ninos;  
+                    if (total>=1)
+                    {
+                        dobles+=1;
+                    }  
+                }
+                document.getElementById("reserva").innerHTML = "Nº de habitaciones familiares: "+familiares+". Número de habitaciones triples: "+triples+". Nº de habitaciones dobles con supletoria: "+dobles_supletoria+". Nº habitaciones dobles: " + dobles;
+            }
+       }
+    </script>
+</body>
+</html>
