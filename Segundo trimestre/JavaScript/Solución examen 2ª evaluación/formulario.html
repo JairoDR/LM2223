@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="formulario.js"></script>
+    <title>Formulario</title>
+    <style>
+        form {
+            margin-left: 20px;
+        }
+        .error{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+            <h1>Formulario examen</h1>
+            <label>Nombre: </label><input class="form" type="text" id="dato0" required placeholder="Nombre">
+            <label id="error0" class="error"></label><br><br>
+            <label>Apellidos: </label><input class="form" type="text" id="dato1" required placeholder="Apellidos">
+            <label id="error1" class="error"></label><br><br>
+            <label>Correo electrónico: </label><input class="form" type="email" id="dato2" required placeholder="Correo electrónico">
+            <label id="error2" class="error"></label><br><br>
+            <label>PIN: </label><input class="form" type="password" id="dato3" required placeholder="PIN">
+            <label id="error3" class="error"></label><br><br>       
+            <label>Repetir PIN: </label><input class="form" type="password" id="dato4" required placeholder="PIN">
+            <label id="error4" class="error"></label><br><br>
+            <input class="form" type="checkbox" id="dato5"><label>Acepto condiciones de uso</label>
+            <label id="error5" class="error"></label><br><br>
+         
+        <button onclick="validar()">Validar</button>
+        
+    <div id="resultado"></div>
+</body>
+</html>
