@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Austin Reaves",
+        "image": "./images/Reaves.png",
+        "position": "Base / Escolta",
+        "description": "Titular de Los Ángeles Lakers",
+        "price": 70
+    },
+    {
+        "id": 2,
+        "name": "Jarred Vanderbilt",
+        "image": "./images/Vanderbilt.png",
+        "position": "Ala-Pívot",
+        "description": "Titular de Los Ángeles Lakers",
+        "price": 70
+    },    
+    {
+        "id": 3,
+        "name": "Anthony Davis",
+        "image": "./images/Davis.png",
+        "position": "Ala-Pívot / Pívot",
+        "description": "Titular de Los Ángeles Lakers",
+        "price": 70
+    },
+    {
+        "id": 4,
+        "name": "D'Angelo Russell",
+        "image": "./images/Russell.png",
+        "position": "Base / Escolta",
+        "description": "Titular de Los Ángeles Lakers",
+        "price": 70
+    },    
+    {
+        "id": 5,
+        "name": "Lebron James",
+        "image": "./images/James.png",
+        "position": "Alero / Ala-Pívot",
+        "description": "Titular de Los Ángeles Lakers",
+        "price": 85
+    },
+    {
+        "id": 6,
+        "name": "Stephen Curry",
+        "image": "./images/Curry.png",
+        "position": "Base",
+        "description": "Titular de Golden State Warriors",
+        "price": 85
+    },
+    {
+        "id": 7,
+        "name": "Jordan Poole",
+        "image": "./images/Poole.png",
+        "position": "Base / Escolta",
+        "description": "Sexto hombre de Golden State Warriors",
+        "price": 80
+    },    
+    {
+        "id": 8,
+        "name": "Klay Thompson",
+        "image": "./images/Thompson.png",
+        "position": "Escolta / Alero",
+        "description": "Titular de Golden State Warriors",
+        "price": 80
+    },
+    {
+        "id": 9,
+        "name": "Draymond Green",
+        "image": "./images/Green.png",
+        "position": "Ala-Pívot / Pívot",
+        "description": "Titular de Golden State Warriors",
+        "price": 80
+    },    
+    {
+        "id": 10,
+        "": "Kevon Looney",
+        "image": "./images/Looney.png",
+        "position": "Pívot / Ala-Pívot",
+        "description": "Titular de Golden State Warriors",
+        "price": 80
+    }
+]

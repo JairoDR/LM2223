@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css">
+    <title>Registrate</title>
+</head>
+<body>
+    <header>
+        <h2 class="logo"><a href="index.html">NBA Products</a></h2>
+        <nav class="navigation">
+            <a class="na" href="index.html"><ion-icon name="home"></ion-icon> Inicio</a>
+            <a class="na" id="Cesta" href="Cesta.html"><ion-icon name="cart"></ion-icon> Cesta</a>
+            <a id="Login" href="Registro.html"><button class="btnLogin-popup">Login</button></a>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="" autocomplete="off" name="login">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="text" id="email-login" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" id="password-login" required>
+                    <label>Contraseña</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" id="remember">Recuerdame</label>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+                <button type="submit" class="btn">Iniciar sesion</button>
+                <div class="login-register">
+                    <p>¿No tienes cuenta? <a href="#" class="register-link">Registarse</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Register</h2>
+            <form action="" autocomplete="off" name="register">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" name="name" id="name-register" required>
+                    <label>Nombre</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="text" name="email" id="email-register" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" name="password" id="password-register" required>
+                    <label>Contraseña</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="call"></ion-icon></span>
+                    <input type="text" name="number" id="number-register" required>
+                    <label>Número</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="card"></ion-icon></span>
+                    <input type="text" name="card" id="card-register" required>
+                    <label>Paypal</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="location"></ion-icon></span>
+                    <input type="text" name="location" id="location-register" required>
+                    <label>Dirección</label>
+                </div>
+                <div class="remember-forgot">
+                    <label id="mecagoentodo"><input type="checkbox" id="conditions">Estoy de acuerdo con las condiciones</label>
+                </div>
+                <button type="submit" class="btn">Registarse</button>
+                <div class="login-register">
+                    <p>¿Ya tienes cuenta? <a href="#" class="login-link">Inicia sesion</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/storage.js"></script>
+    <script src="js/register.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        window.addEventListener("load",function(){
+            document.login.addEventListener("submit",LoginEvent);
+            document.register.addEventListener("submit",RegisterEvent);
+        });
+    </script>
+</body>
+</html>

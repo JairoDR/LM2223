@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/storage.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo"><a href="index.html">NBA Products</a></h2>
+        <nav class="navigation">
+            <a class="na" href="index.html"><ion-icon name="home"></ion-icon> Inicio</a>
+            <a class="na" id="Cesta" href="Cesta.html"><ion-icon name="cart"></ion-icon>Cesta</a>
+            <a id="Login" href="Registro.html"><button class="btnLogin-popup">Login</button></a>
+        </nav>
+    </header>
+    <!-- Filtros -->
+    <div id="filters">
+        <select id="filter-team" onchange="loadProducts()">
+            <option value="ninguno">Ninguno</option>
+            <option value="Lakers">Lakers</option>
+            <option value="Warriors">Warriors</option>
+        </select>
+        <label><input type="text" id="filter-name" placeholder="Nombre del jugador"></label>
+    </div>
+
+    <!-- Productos -->
+    <div class="container">
+        <div id="products">No hay ningun producto</div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.addEventListener('keydown', (event) => {
+        var keyValue = event.key;
+            if(keyValue == "Enter"){
+                loadProducts();
+            }
+        }, false);
+
+    </script>
+</body>
+</html>
