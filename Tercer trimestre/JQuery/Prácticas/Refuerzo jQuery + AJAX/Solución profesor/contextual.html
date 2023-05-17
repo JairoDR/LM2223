@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Contextual</title>
+    <style>
+        #menu-contextual {
+            display: none;
+            background-color: cyan;
+            position: absolute;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Mostrar menú contextual al hacer clic derecho en la pantalla
+            $(document).on('contextmenu', function (e) {
+                e.preventDefault(); // Evitar la acción predeterminada del clic derecho
+
+                // Mostrar menú contextual en la posición del puntero
+                $('#menu-contextual').css({
+                    top: e.pageY,
+                    left: e.pageX,
+                }).show();
+
+                // Establecer las coordenadas del puntero
+                $('#coordenadas').text(`X: ${e.pageX}, Y: ${e.pageY}`);
+            });
+
+            // Cerrar menú contextual al hacer clic en "Cerrar"
+            $('#cerrar').click(function () {
+                $('#menu-contextual').hide();
+            });
+
+            // Cerrar menú contextual al hacer clic fuera del menú
+            $(document).on('click', function (e) {
+                if (!$(e.target).closest('#menu-contextual').length) {
+                    $('#menu-contextual').hide();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="menu-contextual">
+        <h3>Menú Contextual</h3>
+        <p id="coordenadas"></p>
+        <p><a href="#" id="cerrar">Cerrar</a></p>
+    </div>
+</body>
+</html>

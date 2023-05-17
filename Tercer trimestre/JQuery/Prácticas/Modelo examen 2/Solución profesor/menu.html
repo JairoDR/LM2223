@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Menu - Icons</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://code.jquery.com/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#menu" ).menu();
+  } );
+  </script>
+  <style>
+  .ui-menu { width: 150px; }
+  </style>
+</head>
+<body>
+ 
+<ul id="menu">
+    <li>
+        <div><span class="ui-icon ui-icon-folder-open"></span>Abrir carpeta</div>
+      </li>
+      <li>
+        <div><span class="ui-icon ui-icon-document"></span>Nuevo archivo</div>
+      </li>
+  <li>
+    <div><span class="ui-icon ui-icon-disk"></span>Guardar</div>
+  </li>
+  <li>
+    <div><span class="ui-icon ui-icon-mail-closed"></span>Enviar correo</div>
+  </li>
+    <li class="ui-state-disabled">
+    <div><span class="ui-icon ui-icon-print"></span>Imprimir...</div>
+  </li>
+  
+  <li>
+    <div><span class="ui-icon ui-icon-power"></span>Cerrar sesión</div>
+  </li>
+</ul>
+ 
+ 
+</body>
+</html>
