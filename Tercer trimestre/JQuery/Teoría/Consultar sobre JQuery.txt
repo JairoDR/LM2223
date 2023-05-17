@@ -2,6 +2,6 @@ https://oscarotero.com/jquery/?authuser=4
 
 https://api.jquery.com/?authuser=4
 
-+https://www.w3schools.com/jquery/default.asp?authuser=4
+https://www.w3schools.com/jquery/default.asp?authuser=4
 
 https://learn.jquery.com/?authuser=4

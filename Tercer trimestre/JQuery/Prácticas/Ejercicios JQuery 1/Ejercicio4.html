@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <h1 id="cabesa">Encabezado</h1>
+    <p>AOJFKBAFOOASFAFOPAPFSAS</p>
+    <p class="pares">ASODFGNOSKDGOSKDGBEGPOEWQNBGWPOGWEPFOGWESGPSOGSD</p>
+    <p>WSGOBIOGDGP0WFGPOGHGDGS</p>
+    <p class="pares">IRBGEJBSODNGBFOHEROIGEWRHIGW</p>
+    <button id="grande">Más grande</button>
+    <button id="pequeño">Más pequeño</button>
+</body>
+<script>
+    var s = 20;
+    var size = 10;
+    $("#grande").click(function(){
+        s += 10;
+        size += 10;
+        $(".pares").css({"font-size": size, "color": "blue", "background-color": "grey"});
+        $("#cabesa").css({"font-size": s, "color": "blue", "background-color": "grey"});
+    });
+    $("#pequeño").click(function(){
+        s = s <=20 ? s = 20 : s -= 10; /* Esto significa, primero coge el valor de "s", y si "s" es menor o igual
+        a 20, hace que tenga 20 de tamaño, y sino es menor o igual, le resta 10 */
+        size = size <= 10 ? size = 10 : size -10;
+        /* Lo mismo que el de arriba pero con los párrafos */
+        $(".pares").css({"font-size": size, "color": "blue", "background-color": "grey"});
+        $("#cabesa").css({"font-size": s, "color": "blue", "background-color": "grey"});
+    });
+</script>
+</html>
