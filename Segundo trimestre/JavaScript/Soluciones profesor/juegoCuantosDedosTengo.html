@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>¿Cuántos dedos tengo?</title>
+        <title>Dedos</title>
     </head>
     <body>
         <h1>¿Cuántos dedos tengo?</h1>
@@ -11,16 +11,15 @@
             document.getElementById("compruebaNumero").onclick = function()
             {
                 var numeroAleatorio = Math.random();
-                // numeroAleatorio contiene un número real entre 0 y 1
-                numeroAleatorio = numeroAleatorio*6; // Ahora está entre 0 y 6
+                numeroAleatorio = numeroAleatorio*5; //
                 numeroAleatorio = Math.floor(numeroAleatorio);
                 if (document.getElementById("numero").value == numeroAleatorio)
                     {   
-                        alert("Acertaste!! Enhorabuena !!");
+                        alert("Acertaste");
                     }
                 else
                     {
-                        alert("Mala suerte! El número era "+numeroAleatorio);
+                        alert("El número era "+numeroAleatorio);
                     }
             }       
         </script>

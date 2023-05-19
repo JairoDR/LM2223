@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dedos</title>
+    </head>
+    <body>
+        <h1>¿Cuántos dedos tengo?</h1>
+        <img src="dedo.png" alt="">
+        <br><br>
+        <input type="text" id="numero" placeholder="Número">
+        <button id="compruebaNumero">Comprueba</button>
+        <script type="text/javascript">
+            document.getElementById("compruebaNumero").onclick = function()
+            {
+                var numeroAleatorio = Math.random();
+                numeroAleatorio = numeroAleatorio*5; //
+                numeroAleatorio = Math.floor(numeroAleatorio);
+                if (document.getElementById("numero").value == numeroAleatorio)
+                    {   
+                        alert("Acertaste");
+                    }
+                else
+                    {
+                        alert("El número era "+numeroAleatorio);
+                    }
+            }       
+        </script>
+    </body>
+</html>

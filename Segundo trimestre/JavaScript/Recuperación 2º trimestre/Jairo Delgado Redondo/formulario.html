@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+        <ul>
+            <li>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre"/>
+                <div style="display: none; color: red;" class='obligatorio' id="ObligaNombre"> Este campo es obligatorio</div>
+            </li>
+            <li>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido"/>
+                <div style="display: none; color: red;" class='obligatorio' id="ObligaApellido"> Este campo es obligatorio</div>
+            </li>
+            <li>
+                <label for="pin">Email:</label>
+                <input type="email" id="pin1" name="pin"/>
+                <div style="display: none; color: red;" class='obligatorio' id="ObligaPin1"> Este campo es obligatorio</div>
+            </li>
+            <li>
+                <label for="pin">Email:</label>
+                <input type="email" id="pin2" name="pin"/>
+                <div style="display: none; color: red;" class='obligatorio' id="ObligaPin2"> Este campo es obligatorio</div>
+            </li>
+            <li>
+                <label for="condis">Acepto las condiciones de uso</label>
+                <input type="checkbox" id="condiciones" name="condiciones"/>
+                <div style="display: none; color: red;" class="obligatorio" id="ObligaCondi">Debes aceptar las condiciones del formulario</div>
+            </li>
+            <li>
+                <button onclick="validar()">Enviar</button>
+                <div style="display: none; color: red;" class='obligatorio' id="ObligaCondi"> Este campo es obligatorio</div>
+            </li>
+        </ul>
+    <script src="formulario.js"></script>
+</body>
+</html>
